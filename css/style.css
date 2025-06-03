@@ -1,0 +1,267 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8fafc;
+    /* bg-slate-50 */
+}
+
+.hero-bg {
+    background-image: url('https://advertising.expedia.com/wp-content/uploads/2020/08/Car-Hero_1920x800.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    /* slate-200 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    /* slate-400 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+    /* slate-500 */
+}
+
+#header {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#header.transparent-nav {
+    background: #071120;
+    background: linear-gradient(270deg, rgba(7, 17, 32, 1) 0%, rgba(29, 43, 62, 1) 22%, rgba(122, 116, 115, 1) 75%);
+    color: #f1f5f9;
+    /* slate-100 for light text */
+}
+
+#header.transparent-nav .nav-link {
+    color: #f1f5f9;
+    /* slate-100 */
+}
+
+#header.transparent-nav .nav-link:not(.active-nav):hover {
+    color: #bae6fd;
+    /* sky-200 for lighter hover */
+}
+
+#header.transparent-nav .active-nav {
+    color: #0284c7;
+    /* sky-600 */
+    border-bottom: 2px solid #0284c7;
+    /* sky-600 */
+}
+
+#header.transparent-nav .montserrat {
+    /* Logo text */
+    color: #f1f5f9;
+    /* slate-100 */
+}
+
+#header.transparent-nav .montserrat span {
+    /* HN part of logo */
+    color: #0ea5e9;
+    /* sky-500 */
+}
+
+#header.transparent-nav #mobile-menu-button {
+    color: #f1f5f9;
+    /* slate-100 */
+}
+
+
+#header.scrolled-nav {
+    background-color: #0f172a;
+    /* bg-slate-900 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-lg */
+    color: #cbd5e1;
+    /* slate-300 for text on dark scrolled nav */
+}
+
+#header.scrolled-nav .nav-link {
+    color: #cbd5e1;
+    /* slate-300 */
+}
+
+#header.scrolled-nav .nav-link:not(.active-nav):hover {
+    color: #7dd3fc;
+    /* sky-300 */
+}
+
+#header.scrolled-nav .active-nav {
+    color: #0284c7;
+    /* sky-600 */
+    border-bottom: 2px solid #0284c7;
+    /* sky-600 */
+}
+
+#header.scrolled-nav .montserrat {
+    /* Logo text */
+    color: #f1f5f9;
+    /* slate-100 */
+}
+
+#header.scrolled-nav .montserrat span {
+    /* HN part of logo */
+    color: #0284c7;
+    /* sky-600 */
+}
+
+#header.scrolled-nav #mobile-menu-button {
+    color: #f1f5f9;
+    /* slate-100 */
+}
+
+#header.scrolled-nav #mobile-menu-button:hover {
+    color: #38bdf8;
+    /* sky-400 */
+}
+
+.section-title {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.section-title.visible,
+.content-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0284c7;
+    /* sky-600 */
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.timeline-line {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #7dd3fc;
+    /* sky-300 */
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    background-color: #0284c7;
+    /* sky-600 */
+    color: white;
+    padding: 0.85rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0369a1;
+    /* sky-700 */
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(3, 105, 161, 0.4);
+}
+
+.btn-secondary {
+    /* This style is for hero section, text should be light */
+    background-color: transparent;
+    color: #f1f5f9;
+    padding: 0.85rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #f1f5f9;
+}
+
+.btn-secondary:hover {
+    /* On hover, background becomes light, text dark */
+    color: #0f172a;
+    background-color: #f1f5f9;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+    .hero-bg {
+        background-attachment: scroll;
+    }
+
+    .timeline-item::before {
+        left: -24px;
+        width: 16px;
+        height: 16px;
+        top: 4px;
+    }
+
+    .timeline-line {
+        left: -16px;
+    }
+
+    .md\:text-right {
+        text-align: left !important;
+    }
+
+    .md\:pr-12 {
+        padding-right: 0 !important;
+    }
+
+    .md\:pl-12 {
+        padding-left: 0 !important;
+    }
+
+    .md\:order-1 {
+        order: initial !important;
+    }
+
+    .md\:order-2 {
+        order: initial !important;
+    }
+
+    .md\:flex>div {
+        width: 100% !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .section-title,
+    .content-item,
+    .card-hover:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transition: none;
+        transform: none !important;
+    }
+}

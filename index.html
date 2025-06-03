@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoConfiable HN - Calidad y Ahorro Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-700">
+
+    <header id="header" class="sticky top-0 z-50 transparent-nav">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#home" class="text-3xl font-bold montserrat">AutoConfiable<span>HN</span></a>
+                </div>
+                <nav class="hidden md:flex space-x-5 items-center">
+                    <a href="#home" class="nav-link px-3 py-2 text-sm font-medium">Inicio</a>
+                    <a href="#inventory" class="nav-link px-3 py-2 text-sm font-medium">Inventario</a>
+                    <a href="#how-we-work" class="nav-link px-3 py-2 text-sm font-medium">Proceso</a>
+                    <a href="#about-us" class="nav-link px-3 py-2 text-sm font-medium">Nosotros</a>
+                    <a href="#agendar-cita" class="nav-link px-3 py-2 text-sm font-medium">Agendar Cita</a>
+                    <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium">Contacto</a>
+                    <a href="#agendar-cita" id="nav-reserve-visit-btn"
+                        class="ml-4 bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-colors shadow-md hover:shadow-lg transform hover:scale-105">Reservar
+                        Visita</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700">
+            <a href="#home"
+                class="nav-link block px-4 py-3 text-base hover:bg-slate-800 transition-colors text-slate-100">Inicio</a>
+            <a href="#inventory"
+                class="nav-link block px-4 py-3 text-base hover:bg-slate-800 transition-colors text-slate-100">Inventario</a>
+            <a href="#how-we-work"
+                class="nav-link block px-4 py-3 text-base hover:bg-slate-800 transition-colors text-slate-100">Nuestro
+                Proceso</a>
+            <a href="#about-us"
+                class="nav-link block px-4 py-3 text-base hover:bg-slate-800 transition-colors text-slate-100">Nosotros</a>
+            <a href="#agendar-cita"
+                class="nav-link block px-4 py-3 text-base hover:bg-slate-800 transition-colors text-slate-100">Agendar
+                Cita</a>
+            <a href="#contact"
+                class="nav-link block px-4 py-3 text-base hover:bg-slate-800 transition-colors text-slate-100">Contacto</a>
+            <a href="#agendar-cita" id="mobile-reserve-visit-btn"
+                class="block bg-sky-600 hover:bg-sky-700 text-white text-center mx-4 my-3 px-4 py-3 rounded-md text-base font-semibold transition-colors">Reservar
+                Visita</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="pt-0">
+            <div class="hero-bg text-white min-h-screen">
+                <div class="bg-black bg-opacity-50 min-h-screen flex items-center justify-center">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-7xl font-bold montserrat mb-6 reveal-on-scroll section-title">
+                            Tu Próximo Auto: Calidad y Ahorro Inteligente</h1>
+                        <p class="text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto reveal-on-scroll content-item"
+                            style="transition-delay: 0.2s;">Expertos en restaurar y ofrecerte los mejores autos usados
+                            en Honduras. Confiables, transparentes y listos para ti.</p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 reveal-on-scroll content-item"
+                            style="transition-delay: 0.4s;">
+                            <a href="#inventory" id="hero-view-inventory-btn" class="btn-primary">Ver Inventario
+                                Disponible</a>
+                            <a href="#how-we-work" id="hero-learn-process-btn" class="btn-secondary">Conoce Nuestro
+                                Proceso</a>
+                        </div>
+                        <div class="mt-16 reveal-on-scroll content-item" style="transition-delay: 0.6s;">
+                            <input type="text" placeholder="Buscar por Marca o Modelo (ej. Toyota Hilux)"
+                                class="w-full max-w-xl p-4 rounded-lg text-slate-800 focus:ring-2 focus:ring-sky-500 focus:outline-none shadow-xl text-lg bg-white bg-opacity-80 backdrop-blur-sm"
+                                id="heroSearchInput">
+                            <button id="heroSearchButton"
+                                class="bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors ml-0 sm:ml-2 mt-3 sm:mt-0 shadow-lg transform hover:scale-105">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-16 sm:py-20 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-12 reveal-on-scroll section-title">
+                        Recién Llegados y Destacados</h2>
+                    <div id="featured-vehicles-grid"
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                    </div>
+                    <div class="text-center mt-12 reveal-on-scroll content-item">
+                        <a href="#inventory" id="view-all-inventory-link"
+                            class="text-sky-600 hover:text-sky-700 font-semibold text-xl transition-colors group">
+                            Ver Todo el Inventario <span
+                                class="transition-transform group-hover:translate-x-1.5 inline-block text-2xl">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-16 sm:py-20 bg-slate-100">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-12 reveal-on-scroll section-title">
+                        Una Inversión Inteligente y Segura</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <div
+                            class="p-8 bg-white rounded-xl shadow-xl card-hover reveal-on-scroll content-item text-center">
+                            <div class="text-sky-600 mb-5 inline-block p-4 bg-sky-100 rounded-full">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold montserrat text-slate-900 mb-3">Selección Rigurosa</h3>
+                            <p class="text-slate-600">Adquirimos vehículos con potencial y evaluamos cada detalle para
+                                asegurar la calidad desde el inicio.</p>
+                        </div>
+                        <div class="p-8 bg-white rounded-xl shadow-xl card-hover reveal-on-scroll content-item text-center"
+                            style="transition-delay: 0.2s;">
+                            <div class="text-sky-600 mb-5 inline-block p-4 bg-sky-100 rounded-full">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold montserrat text-slate-900 mb-3">Restauración Profesional
+                            </h3>
+                            <p class="text-slate-600">Reparaciones con estándares de calidad, piezas certificadas y mano
+                                de obra experta. <a href="#how-we-work"
+                                    class="text-sky-600 hover:underline font-medium">Conoce más</a>.</p>
+                        </div>
+                        <div class="p-8 bg-white rounded-xl shadow-xl card-hover reveal-on-scroll content-item text-center"
+                            style="transition-delay: 0.4s;">
+                            <div class="text-sky-600 mb-5 inline-block p-4 bg-sky-100 rounded-full">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold montserrat text-slate-900 mb-3">Historial Transparente
+                            </h3>
+                            <p class="text-slate-600">Te mostramos el "antes y después" siempre que sea posible. Sin
+                                sorpresas, solo confianza.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-16 sm:py-20 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-12 reveal-on-scroll section-title">
+                        Lo Que Dicen Nuestros Clientes</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-xl card-hover reveal-on-scroll content-item">
+                            <p class="text-slate-600 mb-5 text-lg leading-relaxed italic">"Compré mi camioneta aquí y el
+                                proceso fue increíblemente transparente. Me mostraron todo sobre la reparación y el auto
+                                ha estado perfecto. ¡Gracias!"</p>
+                            <p class="font-semibold text-slate-800 text-md">- Ana G. (San Pedro Sula)</p>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-xl card-hover reveal-on-scroll content-item"
+                            style="transition-delay: 0.2s;">
+                            <p class="text-slate-600 mb-5 text-lg leading-relaxed italic">"Excelente atención y precios
+                                justos. Encontré justo lo que buscaba y me siento seguro con mi compra. Totalmente
+                                recomendados."</p>
+                            <p class="font-semibold text-slate-800 text-md">- Carlos R. (Tegucigalpa)</p>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-xl card-hover reveal-on-scroll content-item"
+                            style="transition-delay: 0.4s;">
+                            <p class="text-slate-600 mb-5 text-lg leading-relaxed italic">"Al principio dudaba de un
+                                auto reparado, pero el equipo de AutoConfiableHN me explicó todo con detalle. Mi carro
+                                está como nuevo. ¡Muy satisfecho!"</p>
+                            <p class="font-semibold text-slate-800 text-md">- Luisa M. (La Ceiba)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventory" class="hidden py-16 sm:py-20 bg-slate-100 min-h-screen">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-8 reveal-on-scroll section-title">
+                    Nuestro Inventario</h2>
+                
+                <!-- Barra de Búsqueda del Inventario - Extendida -->
+                <div class="mb-8 reveal-on-scroll content-item">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex flex-col sm:flex-row items-center gap-3">
+                            <div class="flex-1 w-full sm:w-auto">
+                                <input type="text" placeholder="Buscar por marca, modelo o año (ej. Toyota Hilux 2022)"
+                                    class="w-full px-4 py-3 border border-slate-00 rounded-lg text-slate-800 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:outline-none shadow-sm text-base placeholder-slate-500"
+                                    id="inventorySearchInput">
+                            </div>
+                            <div class="flex gap-2 w-full sm:w-auto">
+                                <button id="inventorySearchButton"
+                                    class="flex-1 sm:flex-none bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-lg text-base font-semibold transition-colors shadow-sm hover:shadow-md flex items-center justify-center whitespace-nowrap">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    Buscar
+                                </button>
+                                <button id="clearInventorySearchButton"
+                                    class="flex-1 sm:flex-none bg-slate-500 hover:bg-slate-600 text-white px-4 py-3 rounded-lg text-base font-semibold transition-colors shadow-sm hover:shadow-md flex items-center justify-center whitespace-nowrap">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                    Limpiar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10">
+                    <aside
+                        class="w-full md:w-1/4 lg:w-1/5 bg-white p-6 rounded-xl shadow-xl md:sticky md:top-24 self-start reveal-on-scroll content-item"
+                        style="max-height: calc(100vh - 7rem);">
+                        <h3 class="text-2xl font-semibold montserrat text-slate-900 mb-6">Filtrar Vehículos</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <label for="filter-make"
+                                    class="block text-md font-medium text-slate-700 mb-1">Marca</label>
+                                <select id="filter-make"
+                                    class="mt-1 block w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md">
+                                    <option value="">Todas</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="filter-year"
+                                    class="block text-md font-medium text-slate-700 mb-1">Año</label>
+                                <select id="filter-year"
+                                    class="mt-1 block w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md">
+                                    <option value="">Todos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="filter-fuel"
+                                    class="block text-md font-medium text-slate-700 mb-1">Combustible</label>
+                                <select id="filter-fuel"
+                                    class="mt-1 block w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md">
+                                    <option value="">Todos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="filter-condition"
+                                    class="block text-md font-medium text-slate-700 mb-1">Condición</label>
+                                <select id="filter-condition"
+                                    class="mt-1 block w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md">
+                                    <option value="">Todas</option>
+                                    <option value="LISTO_PARA_VENTA">Listo para Venta</option>
+                                    <option value="EN_REPARACION">En Reparación</option>
+                                    <option value="EN_TRANSITO">En Tránsito</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="filter-price" class="block text-md font-medium text-slate-700 mb-1">Rango de
+                                    Precio (LPS)</label>
+                                <input type="range" id="filter-price-range" min="100000" max="2000000" step="50000"
+                                    value="2000000"
+                                    class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600">
+                                <div class="text-md text-slate-500 mt-2">Hasta: <span id="filter-price-value"
+                                        class="font-semibold">LPS 2,000,000</span></div>
+                            </div>
+                            <button id="apply-filters-button"
+                                class="w-full bg-sky-600 hover:bg-sky-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors mt-4 text-md shadow-md hover:shadow-lg transform hover:scale-105">Aplicar
+                                Filtros</button>
+                            <button id="reset-filters-button"
+                                class="w-full bg-slate-600 hover:bg-slate-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors mt-3 text-md shadow-md hover:shadow-lg">Reiniciar
+                                Filtros</button>
+                        </div>
+                    </aside>
+                    <div id="inventory-grid"
+                        class="w-full md:w-3/4 lg:w-4/5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                        <p id="no-results-message"
+                            class="hidden col-span-full text-center text-slate-500 text-xl py-10">No se encontraron
+                            vehículos con los criterios seleccionados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vehicle-detail-section" class="hidden py-16 sm:py-20 bg-white min-h-screen">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <button id="back-to-inventory-button"
+                    class="mb-10 bg-slate-200 hover:bg-slate-300 text-slate-800 px-6 py-3 rounded-lg font-semibold transition-colors text-md shadow hover:shadow-md flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver
+                </button>
+                <div id="vehicle-detail-content" class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+                </div>
+            </div>
+        </section>
+
+        <section id="how-we-work" class="hidden py-16 sm:py-20 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-16 reveal-on-scroll section-title">
+                    Nuestro Proceso: De la Selección a Tus Manos</h2>
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="timeline-line md:block hidden"></div>
+                    <div class="space-y-20">
+                        <div class="md:flex items-center relative reveal-on-scroll content-item">
+                            <div class="md:w-1/2 md:pr-12 md:text-right">
+                                <div class="inline-block relative p-6 bg-white rounded-xl shadow-xl">
+                                    <div class="timeline-item md:absolute md:right-[-39px]"></div>
+                                    <h3 class="text-2xl sm:text-3xl font-semibold montserrat text-sky-700 mb-3">Paso 1:
+                                        Selección y Adquisición</h3>
+                                    <p class="text-slate-600 text-lg leading-relaxed">Investigamos y seleccionamos
+                                        vehículos en subastas y otras fuentes, priorizando aquellos con daños reparables
+                                        que nos permitan ofrecerte un gran valor. Verificamos historiales y
+                                        documentación minuciosamente.</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                                <img src="https://placehold.co/600x400/7dd3fc/475569?text=Selección+Vehicular&font=Montserrat"
+                                    alt="Selección Vehicular" class="rounded-xl shadow-xl w-full">
+                            </div>
+                        </div>
+
+                        <div class="md:flex items-center relative reveal-on-scroll content-item">
+                            <div class="md:w-1/2 md:pl-12 md:order-2 md:text-left">
+                                <div class="inline-block relative p-6 bg-white rounded-xl shadow-xl">
+                                    <div class="timeline-item md:absolute md:left-[-39px]"></div>
+                                    <h3 class="text-2xl sm:text-3xl font-semibold montserrat text-sky-700 mb-3">Paso 2:
+                                        Inspección Detallada</h3>
+                                    <p class="text-slate-600 text-lg leading-relaxed">Cada vehículo adquirido pasa por
+                                        una inspección exhaustiva. Diagnosticamos todos los sistemas y planificamos la
+                                        restauración necesaria para devolverlo a su óptimo funcionamiento y estética.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0 md:order-1">
+                                <img src="https://placehold.co/600x400/38bdf8/475569?text=Inspección+Profesional&font=Montserrat"
+                                    alt="Inspección Profesional" class="rounded-xl shadow-xl w-full">
+                            </div>
+                        </div>
+
+                        <div class="md:flex items-center relative reveal-on-scroll content-item">
+                            <div class="md:w-1/2 md:pr-12 md:text-right">
+                                <div class="inline-block relative p-6 bg-white rounded-xl shadow-xl">
+                                    <div class="timeline-item md:absolute md:right-[-39px]"></div>
+                                    <h3 class="text-2xl sm:text-3xl font-semibold montserrat text-sky-700 mb-3">Paso 3:
+                                        Restauración de Calidad</h3>
+                                    <p class="text-slate-600 text-lg leading-relaxed">Utilizamos piezas de calidad
+                                        (nuevas u OEM) y técnicos calificados para todas las reparaciones mecánicas,
+                                        eléctricas y de carrocería. Seguimos estándares rigurosos.</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                                <img src="https://placehold.co/600x400/0ea5e9/475569?text=Taller+de+Reparación&font=Montserrat"
+                                    alt="Taller de Reparación" class="rounded-xl shadow-xl w-full">
+                            </div>
+                        </div>
+
+                        <div class="md:flex items-center relative reveal-on-scroll content-item">
+                            <div class="md:w-1/2 md:pl-12 md:order-2 md:text-left">
+                                <div class="inline-block relative p-6 bg-white rounded-xl shadow-xl">
+                                    <div class="timeline-item md:absolute md:left-[-39px]"></div>
+                                    <h3 class="text-2xl sm:text-3xl font-semibold montserrat text-sky-700 mb-3">Paso 4:
+                                        Control y Preparación Final</h3>
+                                    <p class="text-slate-600 text-lg leading-relaxed">El vehículo se somete a pruebas de
+                                        carretera y un control de calidad final. Realizamos una limpieza profunda y
+                                        detallado para que lo recibas impecable y listo para disfrutar.</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0 md:order-1">
+                                <img src="https://placehold.co/600x400/0284c7/475569?text=Detallado+Final&font=Montserrat"
+                                    alt="Detallado Final" class="rounded-xl shadow-xl w-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="hidden py-16 sm:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 mb-8 reveal-on-scroll section-title">
+                    Sobre AutoConfiableHN</h2>
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <p class="text-lg sm:text-xl text-slate-700 leading-relaxed reveal-on-scroll content-item">En
+                        AutoConfiableHN, creemos que todos merecen un vehículo de calidad sin pagar de más. Nacimos de
+                        la pasión por los autos y el deseo de ofrecer una alternativa inteligente en el mercado de
+                        usados en Honduras. Nos especializamos en adquirir vehículos con potencial, restaurarlos
+                        profesionalmente y entregártelos con total transparencia y la confianza que mereces.</p>
+                    <p class="text-lg sm:text-xl text-slate-700 leading-relaxed reveal-on-scroll content-item"
+                        style="transition-delay: 0.2s;">Nuestros valores son la <strong
+                            class="text-sky-700">honestidad</strong>, la <strong class="text-sky-700">calidad</strong>
+                        en cada reparación y un <strong class="text-sky-700">servicio al cliente</strong> enfocado en
+                        tus necesidades. ¡Queremos ser tu aliado de confianza en la búsqueda de tu próximo auto!</p>
+                    <img src="https://placehold.co/800x400/075985/e0f2fe?text=Equipo+AutoConfiableHN&font=Montserrat"
+                        alt="Equipo AutoConfiableHN"
+                        class="rounded-xl shadow-xl mx-auto mt-10 reveal-on-scroll content-item"
+                        style="transition-delay: 0.4s;">
+                </div>
+            </div>
+        </section>
+
+        <section id="agendar-cita" class="hidden py-16 sm:py-20 bg-slate-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-12 reveal-on-scroll section-title">
+                    Agenda tu Visita</h2>
+                <p class="text-center text-lg text-slate-600 max-w-2xl mx-auto mb-10 reveal-on-scroll content-item">
+                    Selecciona una fecha y hora para visitarnos y conocer el vehículo de tu interés. ¡Te esperamos!</p>
+                <div class="max-w-2xl mx-auto bg-white p-8 sm:p-10 rounded-xl shadow-2xl reveal-on-scroll content-item"
+                    style="transition-delay: 0.2s;">
+                    <form id="appointment-form">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="appointment-name"
+                                    class="block text-md font-medium text-slate-700 mb-1">Nombre Completo <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" name="appointment-name" id="appointment-name" required
+                                    class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                    placeholder="Tu Nombre">
+                            </div>
+                            <div>
+                                <label for="appointment-phone"
+                                    class="block text-md font-medium text-slate-700 mb-1">Teléfono (WhatsApp) <span
+                                        class="text-red-500">*</span></label>
+                                <input type="tel" name="appointment-phone" id="appointment-phone" required
+                                    class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                    placeholder="+504 XXXXXXXX">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="appointment-email" class="block text-md font-medium text-slate-700 mb-1">Correo
+                                Electrónico</label>
+                            <input type="email" name="appointment-email" id="appointment-email"
+                                class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                placeholder="tu@correo.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="appointment-vehicle-interest"
+                                class="block text-md font-medium text-slate-700 mb-1">Vehículo de Interés
+                                (Opcional)</label>
+                            <input type="text" name="appointment-vehicle-interest" id="appointment-vehicle-interest"
+                                class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                placeholder="Ej: Toyota Hilux 2022">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="appointment-date"
+                                    class="block text-md font-medium text-slate-700 mb-1">Fecha Deseada <span
+                                        class="text-red-500">*</span></label>
+                                <input type="date" name="appointment-date" id="appointment-date" required
+                                    class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md">
+                            </div>
+                            <div>
+                                <label for="appointment-time" class="block text-md font-medium text-slate-700 mb-1">Hora
+                                    Preferida <span class="text-red-500">*</span></label>
+                                <select name="appointment-time" id="appointment-time" required
+                                    class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md">
+                                    <option value="" disabled selected>Selecciona una hora</option>
+                                    <option value="09:00">9:00 AM - 10:00 AM</option>
+                                    <option value="10:00">10:00 AM - 11:00 AM</option>
+                                    <option value="11:00">11:00 AM - 12:00 PM</option>
+                                    <option value="14:00">2:00 PM - 3:00 PM</option>
+                                    <option value="15:00">3:00 PM - 4:00 PM</option>
+                                    <option value="16:00">4:00 PM - 5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="appointment-message"
+                                class="block text-md font-medium text-slate-700 mb-1">Comentarios Adicionales</label>
+                            <textarea name="appointment-message" id="appointment-message" rows="3"
+                                class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                placeholder="¿Alguna pregunta o preferencia específica?"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary w-full sm:w-auto">Confirmar Cita</button>
+                        </div>
+                    </form>
+                    <div id="appointment-submission-message" class="mt-6 text-center"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="hidden py-16 sm:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold montserrat text-slate-900 text-center mb-12 reveal-on-scroll section-title">
+                    Ponte en Contacto</h2>
+                <p class="text-center text-lg text-slate-600 max-w-2xl mx-auto mb-10 reveal-on-scroll content-item">
+                    ¿Tienes preguntas generales o necesitas más información? Estamos aquí para ayudarte.</p>
+                <div class="max-w-2xl mx-auto bg-slate-50 p-8 sm:p-10 rounded-xl shadow-2xl reveal-on-scroll content-item"
+                    style="transition-delay: 0.2s;">
+                    <form id="contact-form-general">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="general-name" class="block text-md font-medium text-slate-700 mb-1">Nombre
+                                    Completo <span class="text-red-500">*</span></label>
+                                <input type="text" name="general-name" id="general-name" required
+                                    class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                    placeholder="Tu Nombre">
+                            </div>
+                            <div>
+                                <label for="general-phone"
+                                    class="block text-md font-medium text-slate-700 mb-1">Teléfono <span
+                                        class="text-red-500">*</span></label>
+                                <input type="tel" name="general-phone" id="general-phone" required
+                                    class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                    placeholder="+504 XXXXXXXX">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="general-email" class="block text-md font-medium text-slate-700 mb-1">Correo
+                                Electrónico <span class="text-red-500">*</span></label>
+                            <input type="email" name="general-email" id="general-email" required
+                                class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                placeholder="tu@correo.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="general-message" class="block text-md font-medium text-slate-700 mb-1">Tu
+                                Mensaje <span class="text-red-500">*</span></label>
+                            <textarea name="general-message" id="general-message" rows="5" required
+                                class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-md"
+                                placeholder="Escribe tu consulta aquí..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary w-full sm:w-auto">Enviar Consulta</button>
+                        </div>
+                    </form>
+                    <div id="general-form-submission-message" class="mt-6 text-center"></div>
+                </div>
+                <div class="mt-16 text-center reveal-on-scroll content-item" style="transition-delay: 0.4s;">
+                    <p class="text-xl text-slate-800 mb-3 font-semibold">Nuestra Información de Contacto:</p>
+                    <p class="text-lg text-slate-600"><strong class="font-medium">Teléfono/WhatsApp:</strong> <a
+                            href="tel:+50498765432" class="text-sky-600 hover:underline">+504 9876-5432</a></p>
+                    <p class="text-lg text-slate-600"><strong class="font-medium">Email:</strong> <a
+                            href="mailto:info@autoconfiablehn.com"
+                            class="text-sky-600 hover:underline">info@autoconfiablehn.com</a></p>
+                    <p class="text-lg text-slate-600"><strong class="font-medium">Dirección:</strong> Colonia Ejemplo,
+                        Calle Principal, La Ceiba, Honduras (Visitas con cita previa)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="#home"
+                class="text-2xl font-bold montserrat text-white hover:text-sky-400 transition-colors">AutoConfiable<span
+                    class="text-sky-500">HN</span></a>
+            <nav class="my-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <a href="#inventory" class="text-sm hover:text-sky-400 transition-colors">Inventario</a>
+                <a href="#how-we-work" class="text-sm hover:text-sky-400 transition-colors">Proceso</a>
+                <a href="#about-us" class="text-sm hover:text-sky-400 transition-colors">Nosotros</a>
+                <a href="#agendar-cita" class="text-sm hover:text-sky-400 transition-colors">Agendar Cita</a>
+                <a href="#contact" class="text-sm hover:text-sky-400 transition-colors">Contacto</a>
+            </nav>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors" aria-label="Facebook">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors" aria-label="Instagram">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.688-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://wa.me/50498765432" target="_blank"
+                    class="text-slate-400 hover:text-sky-400 transition-colors" aria-label="WhatsApp">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; <span id="currentYear"></span> AutoConfiableHN. Todos los derechos reservados.
+                Diseñado con elegancia en Honduras.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
