@@ -7,6 +7,11 @@ async function callGeminiAPI(prompt) {
         console.error("Gemini API Key no está configurada.");
         return "Servicio de IA no disponible: Clave API no configurada.";
     }
+
+
+
+
+    
     const apiUrl = `${API_URL_TEMPLATE}${GEMINI_API_KEY}`;
     const payload = {
         contents: [{ role: "user", parts: [{ text: prompt }] }]
